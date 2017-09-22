@@ -44,6 +44,6 @@ require_relative 'lifesigns_engine/objects/documents/test_sticky_note'
 
 # Weapons
 
-#require_relative 'lifesigns_engine/objects/weapons/test_firearm'
+require_relative 'lifesigns_engine/objects/weapons/test_firearm'
 
 # End of File.

@@ -12,12 +12,24 @@ class TestStickyNote < Minitest::Test
     )
   end
 
+  def test_that_sticky_note_name_is_defined
+    assert @test_sticky_note.name != nil
+  end
+
   def test_that_sticky_note_has_a_name
     assert_equal "Test Sticky Note", @test_sticky_note.name
   end
 
+  def test_that_sticky_note_description_is_defined
+    assert @test_sticky_note.description != nil
+  end
+
   def test_that_sticky_note_has_a_description
     assert_equal "A sticky note for testing", @test_sticky_note.description
+  end
+
+  def test_that_sticky_note_contents_are_defined
+    assert @test_sticky_note.contents != nil
   end
 
   def test_that_sticky_note_has_content

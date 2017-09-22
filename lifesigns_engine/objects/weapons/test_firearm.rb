@@ -94,6 +94,9 @@ class TestFirearm < Minitest::Test
   # Function Tests #
   ##################
 
+  # @test_firearm.add_clip
+  # @test_firearm.reload
+
   def test_firearm_can_be_reloaded
     # Pick up a clip
     @test_firearm.add_clip

@@ -6,7 +6,7 @@ require_relative 'email'
 class TestEMail < Minitest::Test
   def setup
     @test_email = EMail.new(
-      "Name",
+      "Test EMail",
       "Description",
       "Sender",
       "Recipient",
@@ -16,6 +16,10 @@ class TestEMail < Minitest::Test
     )
   end
 
+  #####################
+  # Declaration Tests #
+  #####################
+
   # @test_email.name
 
   def test_that_email_name_is_defined
@@ -23,7 +27,7 @@ class TestEMail < Minitest::Test
   end
 
   def test_that_email_has_a_name
-    assert_equal "Name", @test_email.name
+    assert_equal "Test EMail", @test_email.name
   end
 
   # @test_email.description

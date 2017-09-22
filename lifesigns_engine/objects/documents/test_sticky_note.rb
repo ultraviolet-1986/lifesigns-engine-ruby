@@ -6,11 +6,15 @@ require_relative 'sticky_note'
 class TestStickyNote < Minitest::Test
   def setup
     @test_sticky_note = StickyNote.new(
-      "Name",
+      "Test Sticky Note",
       "Description",
       "Contents"
     )
   end
+
+  #####################
+  # Declaration Tests #
+  #####################
 
   # @test_sticky_note.name
 
@@ -19,7 +23,7 @@ class TestStickyNote < Minitest::Test
   end
 
   def test_that_sticky_note_has_a_name
-    assert_equal "Name", @test_sticky_note.name
+    assert_equal "Test Sticky Note", @test_sticky_note.name
   end
 
   # @test_sticky_note.description

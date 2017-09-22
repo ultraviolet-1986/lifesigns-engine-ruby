@@ -6,7 +6,7 @@ require_relative 'firearm'
 class TestFirearm < Minitest::Test
   def setup
     @test_firearm = Firearm.new(
-      "Name",
+      "Test Firearm",
       "Description",
       10,
       12,
@@ -16,6 +16,10 @@ class TestFirearm < Minitest::Test
     )
   end
 
+  #####################
+  # Declaration Tests #
+  #####################
+
   # @test_firearm.name
 
   def test_that_firearm_name_is_defined
@@ -23,7 +27,7 @@ class TestFirearm < Minitest::Test
   end
 
   def test_that_firearm_has_a_name
-    assert_equal "Name", @test_firearm.name
+    assert_equal "Test Firearm", @test_firearm.name
   end
 
   # @test_firearm.description
@@ -84,6 +88,22 @@ class TestFirearm < Minitest::Test
 
   def test_that_firearm_can_be_fired
     assert_equal true, @test_firearm.is_usable
+  end
+
+  ##################
+  # Function Tests #
+  ##################
+
+  def test_firearm_can_be_reloaded
+    # Pick up a clip
+    @test_firearm.add_clip
+    assert_equal 1, @test_firearm.clips_remaining
+    assert_equal 0, @test_firearm.rounds_remaining
+
+    # Reload the weapon
+    @test_firearm.reload
+    assert_equal 0, @test_firearm.clips_remaining
+    assert_equal 12, @test_firearm.rounds_remaining
   end
 end
 

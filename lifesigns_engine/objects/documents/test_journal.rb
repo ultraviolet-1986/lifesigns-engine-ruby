@@ -6,11 +6,15 @@ require_relative 'email'
 class TestJournal < Minitest::Test
   def setup
     @test_journal = Journal.new(
-      "Name",
+      "Test Journal",
       "Description",
       ["Page 1", "Page 2"]
     )
   end
+
+  #####################
+  # Declaration Tests #
+  #####################
 
   # @test_journal.name
 
@@ -19,7 +23,7 @@ class TestJournal < Minitest::Test
   end
 
   def test_that_journal_has_a_name
-    assert_equal "Name", @test_journal.name
+    assert_equal "Test Journal", @test_journal.name
   end
 
   # @test_journal.description

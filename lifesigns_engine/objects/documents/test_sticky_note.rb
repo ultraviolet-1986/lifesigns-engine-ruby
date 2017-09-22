@@ -44,4 +44,3 @@ class TestStickyNote < Minitest::Test
 end
 
 # End of File.
-

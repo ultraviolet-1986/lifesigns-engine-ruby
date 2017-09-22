@@ -33,7 +33,7 @@
 
 # Documents
 
-#require_relative 'lifesigns_engine/objects/documents/test_email'
+require_relative 'lifesigns_engine/objects/documents/test_email'
 #require_relative 'lifesigns_engine/objects/documents/test_journal'
 require_relative 'lifesigns_engine/objects/documents/test_sticky_note'
 

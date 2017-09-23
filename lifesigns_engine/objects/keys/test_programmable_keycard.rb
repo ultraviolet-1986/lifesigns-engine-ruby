@@ -67,4 +67,23 @@ class TestProgrammableKeycard < Minitest::Test
     @test_programmable_keycard.activate
     assert_equal true, @test_programmable_keycard.is_active
   end
+
+  def test_that_programmable_keycard_cannot_be_activated_more_than_once
+    # Check that the Test Programmable Keycard is already active
+    puts
+    assert_equal true, @test_programmable_keycard.is_active
+
+    @test_programmable_keycard.activate
+    assert_equal true, @test_programmable_keycard.is_active
+  end
+
+  def test_that_programmable_keycard_cannot_be_deactivated_more_than_once
+    # Check that the Test Programmable Keycard is already inactive
+    puts
+    @test_programmable_keycard.deactivate
+    assert_equal false, @test_programmable_keycard.is_active
+
+    @test_programmable_keycard.deactivate
+    assert_equal false, @test_programmable_keycard.is_active
+  end
 end

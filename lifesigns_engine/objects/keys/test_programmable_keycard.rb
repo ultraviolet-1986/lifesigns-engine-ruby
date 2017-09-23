@@ -87,3 +87,5 @@ class TestProgrammableKeycard < Minitest::Test
     assert_equal false, @test_programmable_keycard.is_active
   end
 end
+
+# End of File.

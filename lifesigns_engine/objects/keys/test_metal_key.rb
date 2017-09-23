@@ -106,3 +106,5 @@ class TestMetalKey < Minitest::Test
     assert_equal true, @test_metal_key.is_rusted
   end
 end
+
+# End of File.

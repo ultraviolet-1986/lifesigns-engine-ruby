@@ -1,9 +1,4 @@
 #!/usr/bin/env ruby
-# Script Name: test_lifesigns_engine.rb
-# Script Author: William Willis Whinn
-# Script Created: 2017-09-22
-# Script Updated: 2017-09-23
-# Project Repository: https://github.com/ultraviolet-1986/lifesigns-engine-ruby
 
 # encoding: utf-8
 

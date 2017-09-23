@@ -27,7 +27,7 @@ class Firearm
 
   def add_clip
     self.clips_remaining += 1
-    puts "Your #{self.name} now has #{self.clips_remaining} clip(s) remaining"
+    puts "Your #{self.name.green} now has " + "#{self.clips_remaining} clip(s)".green  + " remaining"
   end
 
   def fire_at(target)
@@ -35,7 +35,7 @@ class Firearm
       self.rounds_remaining -= 1
       target.remaining_health -= self.damage_inflicted
     else
-      puts "Your #{self.name} needs to be reloaded"
+      puts "Your #{self.name.red} needs to be reloaded"
     end
   end
 
@@ -43,10 +43,10 @@ class Firearm
     if self.clips_remaining > 0
       self.clips_remaining -= 1
       self.rounds_remaining = self.capacity
-      puts "Your #{self.name} now has #{self.rounds_remaining} round(s) remaining"
-      puts "Your #{self.name} now has #{self.clips_remaining} clip(s) remaining"
+      puts "Your #{self.name.green} now has " + "#{self.rounds_remaining} round(s)".green + " remaining"
+      puts "Your #{self.name.green} now has " + "#{self.clips_remaining} clip(s)".green + " remaining"
     elsif self.rounds_remaining > 0
-      puts "Your #{self.name} still has #{self.rounds_remaining} round(s) loaded"
+      puts "Your #{self.name.red} still has " + "#{self.rounds_remaining} round(s)".red + " loaded"
     else
       puts "You have no remaining ammunition"
     end

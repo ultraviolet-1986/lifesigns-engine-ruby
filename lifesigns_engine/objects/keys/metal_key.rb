@@ -17,18 +17,22 @@ class MetalKey
   def repair
     if self.is_rusted == true
       self.is_rusted = false
-      puts "The #{self.name} has been repaired"
+      puts "The #{self.name.green} has been repaired"
+    elsif self.is_rusted == false
+      puts "The #{self.name.red} has already been repaired"
     else
-      puts "The #{self.name} does not need to be repaired"
+      puts "Your #{self.name.red} has encountered an unknown error"
     end
   end
 
   def rust
     if self.is_rusted == false
       self.is_rusted = true
-      puts "The #{self.name} has become rusty"
+      puts "Your #{self.name.green} has rusted"
+    elsif self.is_rusted == true
+      puts "Your #{self.name.red} has already rusted"
     else
-      puts "The #{self.name} is already rusty"
+      puts "Your #{self.name.red} has encountered an unknown error"
     end
   end
 end

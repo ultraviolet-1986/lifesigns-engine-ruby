@@ -19,11 +19,25 @@ class ProgrammableKeycard
   end
 
   def activate
-    self.is_active = true
+    if self.is_active == false
+      self.is_active = true
+      puts "Your #{self.name.green} has been activated"
+    elsif self.is_active == true
+      puts "Your #{self.name.red} has already been activated"
+    else
+      puts "Your #{self.name.red} has encountered an unknown error"
+    end
   end
 
   def deactivate
-    self.is_active = false
+    if self.is_active == true
+      self.is_active = false
+      puts "Your #{self.name.green} has been deactivated"
+    elsif self.is_active == false
+      puts "Your #{self.name.red} has already been deactivated"
+    else
+      puts "Your #{self.name.red} has encountered an unknown error"
+    end
   end
 end
 

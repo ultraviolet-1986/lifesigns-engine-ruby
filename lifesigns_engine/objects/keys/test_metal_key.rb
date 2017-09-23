@@ -76,4 +76,33 @@ class TestMetalKey < Minitest::Test
     @test_metal_key.repair
     assert_equal false, @test_metal_key.is_rusted
   end
+
+  def test_that_metal_key_cannot_be_repaired_more_than_once
+    # Rust the Test Metal Key
+    puts
+    @test_metal_key.rust
+    assert_equal true, @test_metal_key.is_rusted
+
+    # Repair the Test Metal Key
+    puts
+    @test_metal_key.repair
+    assert_equal false, @test_metal_key.is_rusted
+
+    # Attempt another repair on the Test Metal Key
+    puts
+    @test_metal_key.repair
+    assert_equal false, @test_metal_key.is_rusted
+  end
+
+  def test_that_metal_key_cannot_be_rusted_more_than_once
+    # Rust the Test Metal Key
+    puts
+    @test_metal_key.rust
+    assert_equal true, @test_metal_key.is_rusted
+
+    # Attempt to rust the Test Metal Key again
+    puts
+    @test_metal_key.rust
+    assert_equal true, @test_metal_key.is_rusted
+  end
 end

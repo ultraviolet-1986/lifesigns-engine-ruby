@@ -99,11 +99,13 @@ class TestFirearm < Minitest::Test
 
   def test_firearm_can_be_reloaded
     # Pick up a clip
+    puts
     @test_firearm.add_clip
     assert_equal 1, @test_firearm.clips_remaining
     assert_equal 0, @test_firearm.rounds_remaining
 
     # Reload the weapon
+    puts
     @test_firearm.reload
     assert_equal 0, @test_firearm.clips_remaining
     assert_equal 12, @test_firearm.rounds_remaining

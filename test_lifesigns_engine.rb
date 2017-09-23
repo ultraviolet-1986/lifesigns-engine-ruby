@@ -39,7 +39,7 @@ require_relative 'lifesigns_engine/objects/documents/test_sticky_note'
 
 # Keys
 
-#require_relative 'lifesigns_engine/objects/keys/test_metal_key'
+require_relative 'lifesigns_engine/objects/keys/test_metal_key'
 #require_relative 'lifesigns_engine/objects/keys/test_programmable_keycard'
 
 # Weapons

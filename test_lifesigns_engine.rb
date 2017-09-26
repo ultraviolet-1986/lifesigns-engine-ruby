@@ -2,6 +2,12 @@
 
 # encoding: utf-8
 
+###########
+# Imports #
+###########
+
+require_relative 'lifesigns_engine'
+
 ##########
 # System #
 ##########

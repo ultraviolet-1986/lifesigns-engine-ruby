@@ -128,6 +128,15 @@ class Location
         self.list_exits
         show_prompt()
 
+      # Save / Load the game
+      elsif input == 'load'
+        puts "\nLoading the game is not yet implemented.".red
+        show_prompt()
+      elsif input == 'save'
+        puts "\nSaving the game is not yet implemented.".red
+        show_prompt()
+
+
       # Catch any other error here
       else
         self.display_location

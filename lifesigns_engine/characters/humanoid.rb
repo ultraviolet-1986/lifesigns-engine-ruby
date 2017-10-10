@@ -1,15 +1,13 @@
 #!/usr/bin/env ruby
 
 class Humanoid
-  attr_reader :name, :description, :speech_colour, :speech, :thought_colour, :thought, :inventory
+  attr_reader :name, :description, :speech_colour, :thought_colour, :inventory
 
-  def initialize(name, description, speech_colour, speech, thought_colour, thought, inventory)
+  def initialize(name, description, speech_colour, thought_colour, inventory)
     @name = name
     @description = description
     @speech_colour = speech_colour
-    @speech = speech
     @thought_colour = thought_colour
-    @thought = thought
     @inventory = inventory
   end
 
@@ -17,10 +15,12 @@ class Humanoid
     @inventory = inventory
   end
 
-  def say
+  def say(speech)
+    puts_wrap("\n#{speech}".light_red)
   end
 
-  def think
+  def think(thought)
+    puts_wrap("#{thought}".red)
   end
 end
 

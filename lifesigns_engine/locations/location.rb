@@ -11,17 +11,13 @@ class Location
     @exits = exits
   end
 
-  def contents=(contents)
-    @contents = contents
-  end
+  def contents=(contents); @contents = contents end
+  def items=(items); @items = items end
+  def exits=(exits); @exits = exits end
 
-  def items=(items)
-    @items = items
-  end
-
-  def exits=(exits)
-    @exits = exits
-  end
+  ####################
+  # Location Viewing #
+  ####################
 
   def display_location
     clear
@@ -29,15 +25,13 @@ class Location
     puts_wrap("#{self.description}")
     puts
     puts_wrap("#{self.contents}")
-    if self.items.empty?
-      do_nothing()
-    else
+    if self.items.any?
       puts
       puts_wrap("Room Contains:".underline)
       self.items.each do |item|
         if item == self.items.first
           puts
-          puts_wrap("#{item.name}".bold)
+          puts_wrap("\n#{item.name}".bold)
           puts_wrap("#{item.description}")
         elsif item == self.items.last
           puts_wrap("#{item.name}".bold)
@@ -50,6 +44,10 @@ class Location
       end
     end
   end
+
+  ############################
+  # Location Item Management #
+  ############################
 
   def add_item(item)
     if defined? item
@@ -70,6 +68,10 @@ class Location
     end
   end
 
+  ########################
+  # Location Orientation #
+  ########################
+
   def list_exits
     print "\nValid directions:".bold + " "
     self.exits.each do |exit|
@@ -82,11 +84,6 @@ class Location
     puts
   end
 
-  def show_prompt
-    prompt = '> '.bold.green
-    print "\n#{prompt}"
-  end
-
   def test_direction(x, y)
     if self.exits.include? "#{x}"
       send("#{y}")
@@ -94,6 +91,15 @@ class Location
       puts "\nIt is not possible to move in this direction."
     end
     show_prompt()
+  end
+
+  ####################
+  # User Interaction #
+  ####################
+
+  def show_prompt
+    prompt = '> '.bold.green
+    print "\n#{prompt}"
   end
 
   def move(north, east, south, west)
@@ -145,10 +151,6 @@ class Location
       end
     end
   end
-
-  def do_nothing
-  end
-
 end
 
 # End of File.

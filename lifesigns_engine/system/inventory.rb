@@ -9,9 +9,9 @@ class Inventory
 
   def inventory=(inventory); @inventory = inventory end
 
-  ################
-  # Item Viewing #
-  ################
+  ##########################
+  # Inventory Item Viewing #
+  ##########################
 
   def list_items
     if self.inventory.empty?
@@ -30,9 +30,9 @@ class Inventory
     end
   end
 
-  ###################
-  # Item Management #
-  ###################
+  #############################
+  # Inventory Item Management #
+  #############################
 
   def add_item(item)
     if defined? item

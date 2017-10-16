@@ -13,17 +13,13 @@ class Firearm
     @is_usable = is_usable
   end
 
-  def rounds_remaining=(rounds_remaining)
-    @rounds_remaining = rounds_remaining
-  end
+  def rounds_remaining=(rounds_remaining); @rounds_remaining = rounds_remaining end
+  def clips_remaining=(clips_remaining); @clips_remaining = clips_remaining end
+  def is_usable=(is_usable); @is_usable = is_usable end
 
-  def clips_remaining=(clips_remaining)
-    @clips_remaining = clips_remaining
-  end
-
-  def is_usable=(is_usable)
-    @is_usable = is_usable
-  end
+  ###################
+  # Firearm Actions #
+  ###################
 
   def add_clip
     self.clips_remaining += 1

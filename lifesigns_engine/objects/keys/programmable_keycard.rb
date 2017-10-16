@@ -10,13 +10,12 @@ class ProgrammableKeycard
     @is_active = is_active
   end
 
-  def clearance_level=(clearance_level)
-    @clearance_level = clearance_level
-  end
+  def clearance_level=(clearance_level); @clearance_level = clearance_level end
+  def is_active=(is_active); @is_active = is_active end
 
-  def is_active=(is_active)
-    @is_active = is_active
-  end
+  ################################
+  # Programmable Keycard Actions #
+  ################################
 
   def activate
     if self.is_active == false

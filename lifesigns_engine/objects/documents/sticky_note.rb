@@ -9,6 +9,10 @@ class StickyNote
     @contents = contents
   end
 
+  #######################
+  # Sticky Note Actions #
+  #######################
+
   def read
     puts "#{self.contents}"
   end

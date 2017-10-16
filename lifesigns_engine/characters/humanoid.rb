@@ -13,9 +13,9 @@ class Humanoid
 
   def inventory=(inventory); @inventory = inventory end
 
-  #####################
-  # Character Actions #
-  #####################
+  ####################
+  # Humanoid Actions #
+  ####################
 
   def say(speech)
     puts_wrap("\n#{speech}".light_red)

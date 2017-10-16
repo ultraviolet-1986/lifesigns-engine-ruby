@@ -13,6 +13,10 @@ class EMail
     @contents = contents
   end
 
+  ##################
+  # E-Mail Actions #
+  ##################
+
   def read
     puts "SUBJECT: #{self.subject}"
     puts "FROM: #{self.sender}"

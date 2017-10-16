@@ -10,9 +10,11 @@ class MetalKey
     @is_rusted = is_rusted
   end
 
-  def is_rusted=(is_rusted)
-    @is_rusted = is_rusted
-  end
+  def is_rusted=(is_rusted); @is_rusted = is_rusted end
+
+  #####################
+  # Metal Key Actions #
+  #####################
 
   def repair
     if self.is_rusted == true

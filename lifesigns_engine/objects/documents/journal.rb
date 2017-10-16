@@ -9,9 +9,11 @@ class Journal
     @contents = contents
   end
 
-  def contents=(contents)
-    @contents = contents
-  end
+  def contents=(contents); @contents = contents end
+
+  ###################
+  # Journal Actions #
+  ###################
 
   def read
     puts_wrap "\n#{self.name}\n".underline

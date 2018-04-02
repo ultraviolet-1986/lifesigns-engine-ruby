@@ -16,7 +16,7 @@ LE_VER_PATCH = 0
 
 ## Homepage
 
-LE_GIT_URL = 'https://github.com/ultraviolet-1986/lifesigns-engine-ruby/'
+LE_URL_GIT = 'https://github.com/ultraviolet-1986/lifesigns-engine-ruby/'
 
 ##########
 # System #
@@ -62,6 +62,6 @@ require_relative 'lifesigns_engine/objects/weapons/firearm'
 #############
 
 puts "Lifesigns Engine v#{LE_VER_MAJOR}.#{LE_VER_MINOR}.#{LE_VER_PATCH} / Ruby v#{RUBY_VERSION}".bold.red
-puts "#{LE_GIT_URL}\n".red
+puts "#{LE_URL_GIT}\n".red
 
 # End of File.

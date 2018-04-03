@@ -43,6 +43,13 @@ class TestHumanoid < Minitest::Test
 
   def test_that_humanoid_has_an_inventory
     assert @test_humanoid.inventory != nil
+    puts "\n#{@test_humanoid.name} has an inventory".green
+  end
+
+  def test_that_humanoid_does_not_have_an_inventory
+    @test_humanoid.inventory = nil
+    assert @test_humanoid.inventory.nil?
+    puts "\n#{@test_humanoid.name} does not have an inventory".red
   end
 
   # @test_humanoid.maximum_health

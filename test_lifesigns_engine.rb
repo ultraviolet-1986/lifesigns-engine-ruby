@@ -20,7 +20,7 @@ require_relative 'lifesigns_engine'
 # Characters #
 ##############
 
-#require_relative 'lifesigns_engine/characters/test_humanoid'
+require_relative 'lifesigns_engine/characters/test_humanoid'
 
 #############
 # Locations #

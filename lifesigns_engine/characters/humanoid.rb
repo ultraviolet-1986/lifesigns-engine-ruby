@@ -24,7 +24,7 @@ class Humanoid
   end
 
   def think(thought)
-    puts_wrap("#{thought}")
+    puts_wrap("\n#{thought}")
   end
 
   def take_damage(damage_points)

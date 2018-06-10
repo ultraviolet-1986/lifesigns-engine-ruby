@@ -15,15 +15,15 @@ class Inventory
 
   def list_items
     if self.inventory.empty?
-      puts "Your inventory is empty"
+      puts_wrap"Your inventory is empty"
     else
       self.inventory.each do |item|
         if item == self.inventory.last
-          puts "#{item.name}".bold
-          puts "#{item.description}"
+          puts_wrap"* ".bold.light_green + "#{item.name}".bold
+          puts_wrap"  #{item.description}"
         else
-          puts "#{item.name}".bold
-          puts "#{item.description}"
+          puts_wrap"* ".bold.light_green + "#{item.name}".bold
+          puts_wrap"  #{item.description}"
           puts
         end
       end

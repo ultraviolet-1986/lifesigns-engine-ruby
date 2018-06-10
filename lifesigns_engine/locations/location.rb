@@ -21,8 +21,9 @@ class Location
 
   def display_location
     clear
-    puts_wrap("#{self.name}".bold)
-    puts_wrap("#{self.description}")
+    puts_wrap("#{$current_character.name}".bold.light_green +
+      " / " + "#{self.name}".bold.light_green)
+    puts_wrap("#{self.description}".green)
     puts
     puts_wrap("#{self.contents}")
     if self.items.any?
@@ -126,12 +127,21 @@ class Location
         exit
 
       # Console manipulation commands
+      elsif input == 'back'
+        self.display_location
+        show_prompt()
       elsif input == 'clear' or input == 'cls'
         self.display_location
         show_prompt()
       elsif input == 'help'
         self.display_location
         self.list_exits
+        show_prompt()
+      elsif input == 'inv' or input == 'inventory'
+        clear
+        puts_wrap("#{$current_character.name}".bold.light_green + " / " + "#{self.name}".bold.light_green)
+        puts
+        $current_character_inventory.list_items
         show_prompt()
 
       # Save / Load the game
